@@ -15,3 +15,12 @@ def home(request):
 
 def index_view(request):
     return HttpResponse("This is index page ha ha ha...")
+
+
+#  RANDOM VIEW
+# def get_notifications(request):
+#     context = {}
+#     user = request.user
+#     notifications = Notification.objects.filter(user=user)
+#     context['notifications'] = notifications
+#     return render (request, 'notifications.html', context)
