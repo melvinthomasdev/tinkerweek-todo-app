@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf.urls.static import static
 
-from todo.views import index_view, home
+from todo.views import index_view, home, detail_view
 from .settings import STATIC_ROOT, STATIC_URL
 # from todo.views import get_notifications
 # from appname import urls
@@ -25,6 +25,7 @@ from .settings import STATIC_ROOT, STATIC_URL
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home, name='home'),
+    path('todo/details/<int:id>/', detail_view, name='details'),
     path('index/', index_view, name="index"),
     # path('appname/', include(appname.urls)),
     # path('notifications/', get_notifications, name='notifications')
